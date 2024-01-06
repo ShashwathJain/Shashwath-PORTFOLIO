@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Form</title>
+    
+</head>
+<title>Forms</title>
+<style>
+  body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://w0.peakpx.com/wallpaper/627/352/HD-wallpaper-purple-bubbles-2021-windows-11-abstract.jpg');
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .subscription-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            background-color: #f751d5;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #830267;
+        }
+
+        table {
+            width: 100%;
+            background-image: url('https://w0.peakpx.com/wallpaper/416/370/HD-wallpaper-windows-windows-11-thumbnail.jpg');
+            background-size: cover;
+            border-radius: 5px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #d725ab;
+            border-radius: 5px;
+        }
+
+
+</style>
+
+<body>
+    <div class="container">
+        <h2>Subscribe for Updates</h2>
+        <form action="#" method="post" class="subscription-form" onsubmit="return showSubscriptionMessage()">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">G-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    
+                    <input type="radio">
+                    <label for="male">Male</label>
+                    <input type="radio">
+                    <label for="female">Female</label>
+                    <input type="radio" >
+                    <label>Others</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <select id="age" name="age" required>
+                    <option value="18-24">18-24</option>
+                    <option value="25-34">25-34</option>
+                    <option value="35-44">35-44</option>
+                    <option value="45-54">45-54</option>
+                    <option value="55+">55+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    
+                    <option value="a">INDIA</option>
+                    <option value="b">Canada</option>
+                    <option value="c">U.S.A</option>
+                    <option value="d">Australia</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <script>
+        function showSubscriptionMessage() {
+            alert('Thank you for subscribing!');
+            return false; // Prevents the form from actually submitting (remove this line if you want the form to submit)
+        }
+    </script>
+</body>
+
+</html>
